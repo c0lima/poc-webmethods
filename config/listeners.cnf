@@ -26,7 +26,7 @@
   <record name="access" javaclass="com.wm.util.Values">
     <record name="WebSocketListener@8082" javaclass="com.wm.util.Values">
       <null name="home"/>
-      <value name="default">exclude</value>
+      <value name="default">include</value>
       <record name="nodes" javaclass="com.wm.util.StringSet">
         <list name="elements">
         </list>

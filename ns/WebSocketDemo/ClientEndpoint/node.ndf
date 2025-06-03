@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">webMethods/WebSocket</value>
+  <value name="node_subtype">unknown</value>
+  <value name="node_nsName">WebSocketDemo:ClientEndpoint</value>
+  <value name="node_pkg">poc-webmethods</value>
+  <value name="is_public">false</value>
+  <value name="uri">ws://localhost:8082/WebSocketDemo/ServerEndpoint</value>
+  <value name="behaviour">Client</value>
+  <record name="callback" javaclass="com.wm.util.Values">
+    <value name="onConnect">WebSocketDemo.ClientEndpoint:onConnect</value>
+    <value name="onBinary">WebSocketDemo.ClientEndpoint:onBinary</value>
+    <value name="onText">WebSocketDemo.ClientEndpoint:onText</value>
+    <value name="onClose">WebSocketDemo.ClientEndpoint:onClose</value>
+    <value name="onError">WebSocketDemo.ClientEndpoint:onError</value>
+  </record>
+</Values>
