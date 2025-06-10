@@ -4,7 +4,7 @@
   <value name="node_type">webMethods/trigger</value>
   <value name="node_subtype">unknown</value>
   <value name="node_nsName">integration:JMSTRIGGER_ProccessMessage</value>
-  <value name="node_pkg">prueba_json_noborrar</value>
+  <value name="node_pkg">poc-webmethods</value>
   <value name="node_comment"></value>
   <value name="is_public">false</value>
   <value name="displayName"></value>
@@ -49,7 +49,7 @@
     <array name="routingRules" type="record" depth="1">
       <record javaclass="com.wm.util.Values">
         <value name="ruleName">Rule1</value>
-        <value name="serviceName">integration:processMessageFinal</value>
+        <value name="serviceName">project.socius_wmipaasdemos.integrations:ProcesarMensajeDesigner</value>
         <value name="filter"></value>
       </record>
     </array>
