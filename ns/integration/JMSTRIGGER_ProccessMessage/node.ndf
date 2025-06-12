@@ -49,7 +49,7 @@
     <array name="routingRules" type="record" depth="1">
       <record javaclass="com.wm.util.Values">
         <value name="ruleName">Rule1</value>
-        <value name="serviceName">integration:processMessageFinal</value>
+        <value name="serviceName">integration:processJsonProductos</value>
         <value name="filter"></value>
       </record>
     </array>

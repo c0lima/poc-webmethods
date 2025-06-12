@@ -67,7 +67,19 @@
               <value name="node_type">unknown</value>
               <value name="node_subtype">unknown</value>
               <value name="is_public">false</value>
-              <value name="field_name">cliente</value>
+              <value name="field_name">id_sucursal</value>
+              <value name="field_type">object</value>
+              <value name="field_dim">0</value>
+              <value name="wrapper_type">java.lang.Integer</value>
+              <value name="nillable">true</value>
+              <value name="form_qualified">false</value>
+              <value name="is_global">false</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="node_type">unknown</value>
+              <value name="node_subtype">unknown</value>
+              <value name="is_public">false</value>
+              <value name="field_name">rut_cliente</value>
               <value name="field_type">string</value>
               <value name="field_dim">0</value>
               <value name="nillable">true</value>
@@ -78,7 +90,42 @@
               <value name="node_type">unknown</value>
               <value name="node_subtype">unknown</value>
               <value name="is_public">false</value>
-              <value name="field_name">monto</value>
+              <value name="field_name">id_producto</value>
+              <value name="field_type">object</value>
+              <value name="field_dim">0</value>
+              <value name="wrapper_type">java.lang.Integer</value>
+              <value name="nillable">true</value>
+              <value name="form_qualified">false</value>
+              <value name="is_global">false</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="node_type">unknown</value>
+              <value name="node_subtype">unknown</value>
+              <value name="is_public">false</value>
+              <value name="field_name">nombre_producto</value>
+              <value name="field_type">string</value>
+              <value name="field_dim">0</value>
+              <value name="nillable">true</value>
+              <value name="form_qualified">false</value>
+              <value name="is_global">false</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="node_type">unknown</value>
+              <value name="node_subtype">unknown</value>
+              <value name="is_public">false</value>
+              <value name="field_name">cantidad</value>
+              <value name="field_type">object</value>
+              <value name="field_dim">0</value>
+              <value name="wrapper_type">java.lang.Integer</value>
+              <value name="nillable">true</value>
+              <value name="form_qualified">false</value>
+              <value name="is_global">false</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="node_type">unknown</value>
+              <value name="node_subtype">unknown</value>
+              <value name="is_public">false</value>
+              <value name="field_name">precio_producto</value>
               <value name="field_type">object</value>
               <value name="field_dim">0</value>
               <value name="wrapper_type">java.math.BigDecimal</value>
@@ -90,7 +137,19 @@
               <value name="node_type">unknown</value>
               <value name="node_subtype">unknown</value>
               <value name="is_public">false</value>
-              <value name="field_name">fecha</value>
+              <value name="field_name">total_venta</value>
+              <value name="field_type">object</value>
+              <value name="field_dim">0</value>
+              <value name="wrapper_type">java.math.BigDecimal</value>
+              <value name="nillable">true</value>
+              <value name="form_qualified">false</value>
+              <value name="is_global">false</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="node_type">unknown</value>
+              <value name="node_subtype">unknown</value>
+              <value name="is_public">false</value>
+              <value name="field_name">medio_pago</value>
               <value name="field_type">string</value>
               <value name="field_dim">0</value>
               <value name="nillable">true</value>
@@ -101,7 +160,7 @@
               <value name="node_type">unknown</value>
               <value name="node_subtype">unknown</value>
               <value name="is_public">false</value>
-              <value name="field_name">messageID</value>
+              <value name="field_name">fecha</value>
               <value name="field_type">string</value>
               <value name="field_dim">0</value>
               <value name="nillable">true</value>
@@ -209,5 +268,5 @@
   <value name="is_public">false</value>
   <value name="node_type">service</value>
   <value name="IRTNODE_VERSION">1</value>
-  <value name="IRTNODE_PROPERTY">CwQAAAABBQEEGQBjAG8AbQAuAHcAbQAuAGQAYQB0AGEALgBJAFMATQBlAG0ARABhAHQAYQBJAG0AcABsBBMAcwBlAHIAdgBpAGMAZQBUAGUAbQBwAGwAYQB0AGUATgBhAG0AZQQlAGMAbwBtAC4AdwBtAC4AYQBkAGEAcAB0AGUAcgAuAHcAbQBqAGQAYgBjAC4AcwBlAHIAdgBpAGMAZQBzAC4ASQBuAHMAZQByAHQEDwBtAGUAdABhAGQAYQB0AGEAVgBlAHIAcwBpAG8AbgsEAAAAAAQOAGMAbwBuAG4AZQBjAHQAaQBvAG4ATgBhAG0AZQQTAGIAZAA6AHAAbwBzAHQAZwByAGUAcwBzAHEAbABfAGIAZABkAGQEEgB0AGUAbQBwAGwAYQB0AGUAUAByAG8AcABlAHIAdABpAGUAcwUBAAIEEwB0AGEAYgBsAGUAcwAuAHQAYQBiAGwAZQBJAG4AZABlAHgAZQBzCgEEEABqAGEAdgBhAC4AbABhAG4AZwAuAFMAdAByAGkAbgBnBAAEEgB0AGEAYgBsAGUAcwAuAGMAYQB0AGEAbABvAGcATgBhAG0AZQoBAA4ECABtAGUAcwBzAGEAZwBlAHMEEQB0AGEAYgBsAGUAcwAuAHMAYwBoAGUAbQBhAE4AYQBtAGUKAQAOBBAAPABjAHUAcgByAGUAbgB0ACAAcwBjAGgAZQBtAGEAPgQQAHQAYQBiAGwAZQBzAC4AdABhAGIAbABlAE4AYQBtAGUKAQAOBAgAbQBlAG4AcwBhAGoAZQBzBBAAdABhAGIAbABlAHMALgB0AGEAYgBsAGUAVAB5AHAAZQoBAA4EBQBUAEEAQgBMAEUEEQB0AGEAYgBsAGUAcwAuAGMAbwBsAHUAbQBuAEkAbgBmAG8KAQAOBMAAaQBkAFwAbgBzAGUAcgBpAGEAbAAoADEAMAApACAATgBPAFQAIABOAFUATABMAFwAbgA0AFwAbgAxAFwAbgAiAFwAbgAKAGMAbABpAGUAbgB0AGUAXABuAHQAZQB4AHQAKAAyADEANAA3ADQAOAAzADYANAA3ACkAIABOAE8AVAAgAE4AVQBMAEwAXABuADEAMgBcAG4AMgBcAG4AIgBcAG4ACgBtAG8AbgB0AG8AXABuAG4AdQBtAGUAcgBpAGMAKAAxADAALAAyACkAIABOAE8AVAAgAE4AVQBMAEwAXABuADIAXABuADMAXABuACIAXABuAAoAZgBlAGMAaABhAFwAbgB0AGkAbQBlAHMAdABhAG0AcABcAG4AOQAzAFwAbgA0AFwAbgAiAFwAbgAKAG0AZQBzAHMAYQBnAGUASQBEAFwAbgB0AGUAeAB0ACgAMgAxADQANwA0ADgAMwA2ADQANwApAFwAbgAxADIAXABuADUAXABuACIAXABuAAoEFQB0AGEAYgBsAGUAcwAuAHIAZQBhAGwAUwBjAGgAZQBtAGEATgBhAG0AZQoBAA4EBgBwAHUAYgBsAGkAYwQNAHUAcABkAGEAdABlAC4AYwBvAGwAdQBtAG4KBAAOBAcAYwBsAGkAZQBuAHQAZQQFAG0AbwBuAHQAbwQFAGYAZQBjAGgAYQQJAG0AZQBzAHMAYQBnAGUASQBEBBEAdQBwAGQAYQB0AGUALgBjAG8AbAB1AG0AbgBUAHkAcABlCgQADgQZAHQAZQB4AHQAKAAyADEANAA3ADQAOAAzADYANAA3ACkAIABOAE8AVAAgAE4AVQBMAEwEFgBuAHUAbQBlAHIAaQBjACgAMQAwACwAMgApACAATgBPAFQAIABOAFUATABMBAkAdABpAG0AZQBzAHQAYQBtAHAEEAB0AGUAeAB0ACgAMgAxADQANwA0ADgAMwA2ADQANwApBA8AdQBwAGQAYQB0AGUALgBKAEQAQgBDAFQAeQBwAGUKBAAOBAcAVgBBAFIAQwBIAEEAUgQHAE4AVQBNAEUAUgBJAEMECQBUAEkATQBFAFMAVABBAE0AUAA5BBEAdQBwAGQAYQB0AGUALgBlAHgAcAByAGUAcwBzAGkAbwBuCgQADgQBAD8AQABAAEAEEgB1AHAAZABhAHQAZQAuAGkAbgBwAHUAdABDAG8AbAB1AG0AbgoEAA4AKwAsAC0ALgQWAHUAcABkAGEAdABlAC4AaQBuAHAAdQB0AEMAbwBsAHUAbQBuAFQAeQBwAGUKBAAOADIAMwA0ADUEFAB1AHAAZABhAHQAZQAuAGkAbgBwAHUAdABKAEQAQgBDAFQAeQBwAGUKBAAOADkAOgA7ADkEEQB1AHAAZABhAHQAZQAuAGkAbgBwAHUAdABGAGkAZQBsAGQKBAAOACsALAAtAC4EFQB1AHAAZABhAHQAZQAuAGkAbgBwAHUAdABGAGkAZQBsAGQAVAB5AHAAZQoEAA4ADgQUAGoAYQB2AGEALgBtAGEAdABoAC4AQgBpAGcARABlAGMAaQBtAGEAbAAOAA4EEwB1AHAAZABhAHQAZQAuAHEAdQBlAHIAeQBUAGkAbQBlAE8AdQB0BAIALQAxBBIAcgBlAHMAdQBsAHQALgByAGUAcwB1AGwAdABGAGkAZQBsAGQADwQWAHIAZQBzAHUAbAB0AC4AcgBlAHMAdQBsAHQARgBpAGUAbABkAFQAeQBwAGUEEQBqAGEAdgBhAC4AbABhAG4AZwAuAEkAbgB0AGUAZwBlAHIEBgB1AHMAZQByAGkAZAQbAG8AdgBlAHIAcgBpAGQAZQBDAHIAZQBkAGUAbgB0AGkAYQBsAHMALgAkAGQAYgBVAHMAZQByBAoAdQBzAGUAcgBpAGQAVAB5AHAAZQAOBA8AaQBuAHAAdQB0AFUAcwBlAHIAaQBkAFMAaQBnAG4AbgQIAHAAYQBzAHMAdwBvAHIAZAQfAG8AdgBlAHIAcgBpAGQAZQBDAHIAZQBkAGUAbgB0AGkAYQBsAHMALgAkAGQAYgBQAGEAcwBzAHcAbwByAGQEDABwAGEAcwBzAHcAbwByAGQAVAB5AHAAZQAOBBEAaQBuAHAAdQB0AFAAYQBzAHMAdwBvAHIAZABTAGkAZwBuAHQEEABkAGUAcwBpAGcAbgBUAGkAbQBlAEwAbwBjAGEAbABlBAUAZQBzAF8AQwBMAgAEGQBhAGQAYQBwAHQAZQByAFMAZQByAHYAaQBjAGUATgBvAGQAZQBWAGUAcgBzAGkAbwBuCwQAAAACBAsAYQBkAGEAcAB0AGUAcgBUAHkAcABlBAsASgBEAEIAQwBBAGQAYQBwAHQAZQByBA8AaQBuAHAAdQB0AFIAZQBjAG8AcgBkAE4AYQBtAGUEDwBkAGIAXwBhAGQAYQBwAHQAZQByAEkAbgBwAHUAdAQQAG8AdQB0AHAAdQB0AFIAZQBjAG8AcgBkAE4AYQBtAGUEEABkAGIAXwBhAGQAYQBwAHQAZQByAE8AdQB0AHAAdQB0AgA=</value>
+  <value name="IRTNODE_PROPERTY">CwQAAAABBQEEGQBjAG8AbQAuAHcAbQAuAGQAYQB0AGEALgBJAFMATQBlAG0ARABhAHQAYQBJAG0AcABsBBMAcwBlAHIAdgBpAGMAZQBUAGUAbQBwAGwAYQB0AGUATgBhAG0AZQQlAGMAbwBtAC4AdwBtAC4AYQBkAGEAcAB0AGUAcgAuAHcAbQBqAGQAYgBjAC4AcwBlAHIAdgBpAGMAZQBzAC4ASQBuAHMAZQByAHQEDwBtAGUAdABhAGQAYQB0AGEAVgBlAHIAcwBpAG8AbgsEAAAAAAQOAGMAbwBuAG4AZQBjAHQAaQBvAG4ATgBhAG0AZQQTAGIAZAA6AHAAbwBzAHQAZwByAGUAcwBzAHEAbABfAGIAZABkAGQEEgB0AGUAbQBwAGwAYQB0AGUAUAByAG8AcABlAHIAdABpAGUAcwUBAAIEEwB0AGEAYgBsAGUAcwAuAHQAYQBiAGwAZQBJAG4AZABlAHgAZQBzCgEEEABqAGEAdgBhAC4AbABhAG4AZwAuAFMAdAByAGkAbgBnBAAEEgB0AGEAYgBsAGUAcwAuAGMAYQB0AGEAbABvAGcATgBhAG0AZQoBAA4EEQA8AGMAdQByAHIAZQBuAHQAIABjAGEAdABhAGwAbwBnAD4EEQB0AGEAYgBsAGUAcwAuAHMAYwBoAGUAbQBhAE4AYQBtAGUKAQAOBBAAPABjAHUAcgByAGUAbgB0ACAAcwBjAGgAZQBtAGEAPgQQAHQAYQBiAGwAZQBzAC4AdABhAGIAbABlAE4AYQBtAGUKAQAOBAYAdgBlAG4AdABhAHMEEAB0AGEAYgBsAGUAcwAuAHQAYQBiAGwAZQBUAHkAcABlCgEADgQFAFQAQQBCAEwARQQRAHQAYQBiAGwAZQBzAC4AYwBvAGwAdQBtAG4ASQBuAGYAbwoBAA6EAAABpgBpAGQAXwBzAHUAYwB1AHIAcwBhAGwAXABuAGkAbgB0ADQAXABuADQAXABuADEAXABuACIAXABuAAoAaQBkAF8AdgBlAG4AdABhAFwAbgBzAGUAcgBpAGEAbAAoADEAMAApACAATgBPAFQAIABOAFUATABMAFwAbgA0AFwAbgAyAFwAbgAiAFwAbgAKAHIAdQB0AF8AYwBsAGkAZQBuAHQAZQBcAG4AdgBhAHIAYwBoAGEAcgAoADIAMAApACAATgBPAFQAIABOAFUATABMAFwAbgAxADIAXABuADMAXABuACIAXABuAAoAaQBkAF8AcAByAG8AZAB1AGMAdABvAFwAbgBpAG4AdAA0ACAATgBPAFQAIABOAFUATABMAFwAbgA0AFwAbgA0AFwAbgAiAFwAbgAKAG4AbwBtAGIAcgBlAF8AcAByAG8AZAB1AGMAdABvAFwAbgB2AGEAcgBjAGgAYQByACgAOQA5ADkAKQAgAE4ATwBUACAATgBVAEwATABcAG4AMQAyAFwAbgA1AFwAbgAiAFwAbgAKAGMAYQBuAHQAaQBkAGEAZABcAG4AaQBuAHQANAAgAE4ATwBUACAATgBVAEwATABcAG4ANABcAG4ANgBcAG4AIgBcAG4ACgBwAHIAZQBjAGkAbwBfAHAAcgBvAGQAdQBjAHQAbwBcAG4AbgB1AG0AZQByAGkAYwAoADEAMAAsADIAKQAgAE4ATwBUACAATgBVAEwATABcAG4AMgBcAG4ANwBcAG4AIgBcAG4ACgB0AG8AdABhAGwAXwB2AGUAbgB0AGEAXABuAG4AdQBtAGUAcgBpAGMAKAAxADIALAAyACkAIABOAE8AVAAgAE4AVQBMAEwAXABuADIAXABuADgAXABuACIAXABuAAoAbQBlAGQAaQBvAF8AcABhAGcAbwBcAG4AdgBhAHIAYwBoAGEAcgAoADUAMAApACAATgBPAFQAIABOAFUATABMAFwAbgAxADIAXABuADkAXABuACIAXABuAAoAZgBlAGMAaABhAFwAbgB0AGkAbQBlAHMAdABhAG0AcAAgAE4ATwBUACAATgBVAEwATABcAG4AOQAzAFwAbgAxADAAXABuACIAXABuAAoEFQB0AGEAYgBsAGUAcwAuAHIAZQBhAGwAUwBjAGgAZQBtAGEATgBhAG0AZQoBAA4EBgBwAHUAYgBsAGkAYwQNAHUAcABkAGEAdABlAC4AYwBvAGwAdQBtAG4KCQAOBAsAaQBkAF8AcwB1AGMAdQByAHMAYQBsBAsAcgB1AHQAXwBjAGwAaQBlAG4AdABlBAsAaQBkAF8AcAByAG8AZAB1AGMAdABvBA8AbgBvAG0AYgByAGUAXwBwAHIAbwBkAHUAYwB0AG8ECABjAGEAbgB0AGkAZABhAGQEDwBwAHIAZQBjAGkAbwBfAHAAcgBvAGQAdQBjAHQAbwQLAHQAbwB0AGEAbABfAHYAZQBuAHQAYQQKAG0AZQBkAGkAbwBfAHAAYQBnAG8EBQBmAGUAYwBoAGEEEQB1AHAAZABhAHQAZQAuAGMAbwBsAHUAbQBuAFQAeQBwAGUKCQAOBAQAaQBuAHQANAQUAHYAYQByAGMAaABhAHIAKAAyADAAKQAgAE4ATwBUACAATgBVAEwATAQNAGkAbgB0ADQAIABOAE8AVAAgAE4AVQBMAEwEFQB2AGEAcgBjAGgAYQByACgAOQA5ADkAKQAgAE4ATwBUACAATgBVAEwATAA5BBYAbgB1AG0AZQByAGkAYwAoADEAMAAsADIAKQAgAE4ATwBUACAATgBVAEwATAQWAG4AdQBtAGUAcgBpAGMAKAAxADIALAAyACkAIABOAE8AVAAgAE4AVQBMAEwEFAB2AGEAcgBjAGgAYQByACgANQAwACkAIABOAE8AVAAgAE4AVQBMAEwEEgB0AGkAbQBlAHMAdABhAG0AcAAgAE4ATwBUACAATgBVAEwATAQPAHUAcABkAGEAdABlAC4ASgBEAEIAQwBUAHkAcABlCgkADgQHAEkATgBUAEUARwBFAFIEBwBWAEEAUgBDAEgAQQBSAEMARABDBAcATgBVAE0ARQBSAEkAQwBIAEQECQBUAEkATQBFAFMAVABBAE0AUAQRAHUAcABkAGEAdABlAC4AZQB4AHAAcgBlAHMAcwBpAG8AbgoJAA4EAQA/AE8ATwBPAE8ATwBPAE8ATwQSAHUAcABkAGEAdABlAC4AaQBuAHAAdQB0AEMAbwBsAHUAbQBuCgkADgArACwALQAuAC8AMAAxADIAMwQWAHUAcABkAGEAdABlAC4AaQBuAHAAdQB0AEMAbwBsAHUAbQBuAFQAeQBwAGUKCQAOADcAOAA5ADoAOQA8AD0APgA/BBQAdQBwAGQAYQB0AGUALgBpAG4AcAB1AHQASgBEAEIAQwBUAHkAcABlCgkADgBDAEQAQwBEAEMASABIAEQASwQRAHUAcABkAGEAdABlAC4AaQBuAHAAdQB0AEYAaQBlAGwAZAoJAA4AKwAsAC0ALgAvADAAMQAyADMEFQB1AHAAZABhAHQAZQAuAGkAbgBwAHUAdABGAGkAZQBsAGQAVAB5AHAAZQoJAA4EEQBqAGEAdgBhAC4AbABhAG4AZwAuAEkAbgB0AGUAZwBlAHIADgCLAA4AiwQUAGoAYQB2AGEALgBtAGEAdABoAC4AQgBpAGcARABlAGMAaQBtAGEAbACQAA4ADgQTAHUAcABkAGEAdABlAC4AcQB1AGUAcgB5AFQAaQBtAGUATwB1AHQEAgAtADEEEgByAGUAcwB1AGwAdAAuAHIAZQBzAHUAbAB0AEYAaQBlAGwAZAAPBBYAcgBlAHMAdQBsAHQALgByAGUAcwB1AGwAdABGAGkAZQBsAGQAVAB5AHAAZQCLBAYAdQBzAGUAcgBpAGQEGwBvAHYAZQByAHIAaQBkAGUAQwByAGUAZABlAG4AdABpAGEAbABzAC4AJABkAGIAVQBzAGUAcgQKAHUAcwBlAHIAaQBkAFQAeQBwAGUADgQPAGkAbgBwAHUAdABVAHMAZQByAGkAZABTAGkAZwBuAJsECABwAGEAcwBzAHcAbwByAGQEHwBvAHYAZQByAHIAaQBkAGUAQwByAGUAZABlAG4AdABpAGEAbABzAC4AJABkAGIAUABhAHMAcwB3AG8AcgBkBAwAcABhAHMAcwB3AG8AcgBkAFQAeQBwAGUADgQRAGkAbgBwAHUAdABQAGEAcwBzAHcAbwByAGQAUwBpAGcAbgChBBAAZABlAHMAaQBnAG4AVABpAG0AZQBMAG8AYwBhAGwAZQQFAGUAcwBfAEMATAIABBkAYQBkAGEAcAB0AGUAcgBTAGUAcgB2AGkAYwBlAE4AbwBkAGUAVgBlAHIAcwBpAG8AbgsEAAAAAgQLAGEAZABhAHAAdABlAHIAVAB5AHAAZQQLAEoARABCAEMAQQBkAGEAcAB0AGUAcgQPAGkAbgBwAHUAdABSAGUAYwBvAHIAZABOAGEAbQBlBA8AZABiAF8AYQBkAGEAcAB0AGUAcgBJAG4AcAB1AHQEEABvAHUAdABwAHUAdABSAGUAYwBvAHIAZABOAGEAbQBlBBAAZABiAF8AYQBkAGEAcAB0AGUAcgBPAHUAdABwAHUAdAIA</value>
 </Values>
