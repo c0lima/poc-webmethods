@@ -5,7 +5,7 @@
 
   <!-- nodes -->
 
-<RETRY TIMEOUT="" COUNT="100" BACK-OFF="" LOOP-ON="SUCCESS">
+<RETRY TIMEOUT="" COUNT="1" BACK-OFF="" LOOP-ON="SUCCESS">
   <COMMENT></COMMENT>
 
   <!-- nodes -->
