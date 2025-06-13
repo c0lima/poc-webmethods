@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FLOW VERSION="3.0" CLEANUP="true">
+
+  <!-- nodes -->
+
+<SEQUENCE TIMEOUT="" EXIT-ON="FAILURE">
+  <COMMENT>Validación</COMMENT>
+
+  <!-- nodes -->
+
+<BRANCH TIMEOUT="" LABELEXPRESSIONS="true">
+  <COMMENT>Validar Campos de venta</COMMENT>
+
+  <!-- nodes -->
+
+<SEQUENCE NAME="%docProducto/IdVenta% == null || %docProducto/IdVenta% == &#34;&#34;" TIMEOUT="" EXIT-ON="SUCCESS">
+  <COMMENT>id_venta</COMMENT>
+
+  <!-- nodes -->
+
+<INVOKE TIMEOUT="" SERVICE="pub.flow:debugLog" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_name">debugLogInput</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">field</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">message</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">field</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">function</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">field</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">level</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+          <value>Fatal</value>
+          <value>Error</value>
+          <value>Warn</value>
+          <value>Info</value>
+          <value>Debug</value>
+          <value>Trace</value>
+          <value>Off</value>
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/message;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">Error En idSucursal</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">field</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_name">message</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+
+<MAP MODE="OUTPUT">
+</MAP>
+</INVOKE>
+
+<EXIT SIGNAL="FAILURE" FAILURE-MESSAGE="idVenta vacío o nulo">
+  <COMMENT></COMMENT>
+</EXIT>
+</SEQUENCE>
+
+<SEQUENCE NAME="%docProducto/IdSucursal% == null || %docProducto/IdSucursal% == &#34;&#34;" TIMEOUT="" EXIT-ON="FAILURE">
+  <COMMENT>id_sucursal</COMMENT>
+
+  <!-- nodes -->
+
+<INVOKE TIMEOUT="" SERVICE="pub.flow:debugLog" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+</MAP>
+</INVOKE>
+
+<EXIT FROM="$flow" SIGNAL="SUCCESS" FAILURE-MESSAGE="error id">
+  <COMMENT></COMMENT>
+</EXIT>
+</SEQUENCE>
+
+<SEQUENCE NAME="%docProducto/RutCliente% == null || %docProducto/RutCliente% == &#34;&#34;" TIMEOUT="" EXIT-ON="SUCCESS">
+  <COMMENT>rut_cliente</COMMENT>
+
+  <!-- nodes -->
+
+<INVOKE TIMEOUT="" SERVICE="pub.flow:debugLog" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_name">debugLogInput</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">field</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">message</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">field</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">function</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">field</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">level</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+          <value>Fatal</value>
+          <value>Error</value>
+          <value>Warn</value>
+          <value>Info</value>
+          <value>Debug</value>
+          <value>Trace</value>
+          <value>Off</value>
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/message;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">Error en Rut Cliente</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">field</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_name">message</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+</INVOKE>
+
+<EXIT SIGNAL="FAILURE" FAILURE-MESSAGE="rutCliente vacío">
+  <COMMENT></COMMENT>
+</EXIT>
+</SEQUENCE>
+
+<SEQUENCE NAME="%docProducto/TotalVenta% == null || %docProducto/TotalVenta% == &#34;&#34;" TIMEOUT="" EXIT-ON="SUCCESS">
+  <COMMENT>total_Venta</COMMENT>
+
+  <!-- nodes -->
+
+<INVOKE TIMEOUT="" SERVICE="pub.flow:debugLog" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+</INVOKE>
+
+<EXIT SIGNAL="FAILURE" FAILURE-MESSAGE="TotalVenta vacío">
+  <COMMENT></COMMENT>
+</EXIT>
+</SEQUENCE>
+
+<SEQUENCE NAME="%docProducto/MedioPago% == null || %docProducto/MedioPago% == &#34;&#34;" TIMEOUT="" EXIT-ON="SUCCESS">
+  <COMMENT>medio_pago</COMMENT>
+
+  <!-- nodes -->
+
+<INVOKE TIMEOUT="" SERVICE="pub.flow:debugLog" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+</INVOKE>
+
+<EXIT SIGNAL="FAILURE" FAILURE-MESSAGE="Medio de Pago vacío">
+  <COMMENT></COMMENT>
+</EXIT>
+</SEQUENCE>
+
+<SEQUENCE NAME="%docProducto/NombreSucursal% == null || %docProducto/NombreSucursal% == &#34;&#34;" TIMEOUT="" EXIT-ON="SUCCESS">
+  <COMMENT>nombre_sucursal</COMMENT>
+
+  <!-- nodes -->
+
+<INVOKE TIMEOUT="" SERVICE="pub.flow:debugLog" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+</INVOKE>
+
+<EXIT SIGNAL="FAILURE" FAILURE-MESSAGE="Nombre Sucursal  vacío">
+  <COMMENT></COMMENT>
+</EXIT>
+</SEQUENCE>
+
+<EXIT FROM="$parent" SIGNAL="SUCCESS" FAILURE-MESSAGE="">
+  <COMMENT></COMMENT>
+</EXIT>
+</BRANCH>
+</SEQUENCE>
+
+<LOOP TIMEOUT="" IN-ARRAY="/docProducto/Producto">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<BRANCH TIMEOUT="" LABELEXPRESSIONS="true">
+  <COMMENT>Validar Campos de Productos</COMMENT>
+
+  <!-- nodes -->
+
+<SEQUENCE NAME=" %Producto/IdProducto% == null || %Producto/IdProducto% == &#34;&#34;" TIMEOUT="" EXIT-ON="FAILURE">
+  <COMMENT>id_producto</COMMENT>
+
+  <!-- nodes -->
+
+<INVOKE TIMEOUT="" SERVICE="pub.flow:debugLog" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+</INVOKE>
+
+<EXIT FROM="$parent" SIGNAL="SUCCESS" FAILURE-MESSAGE="">
+  <COMMENT></COMMENT>
+</EXIT>
+</SEQUENCE>
+
+<SEQUENCE NAME="%Producto/NombreProducto% == null || %Producto/NombreProducto% == &#34;&#34;" TIMEOUT="" EXIT-ON="FAILURE">
+  <COMMENT>Nombre_producto</COMMENT>
+
+  <!-- nodes -->
+
+<INVOKE TIMEOUT="" SERVICE="pub.flow:debugLog" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+</INVOKE>
+
+<EXIT FROM="$parent" SIGNAL="SUCCESS" FAILURE-MESSAGE="">
+  <COMMENT></COMMENT>
+</EXIT>
+</SEQUENCE>
+
+<SEQUENCE NAME="%Producto/Cantidad% == null || %Producto/Cantidad% == &#34;&#34;" TIMEOUT="" EXIT-ON="FAILURE">
+  <COMMENT>cantidad</COMMENT>
+
+  <!-- nodes -->
+
+<INVOKE TIMEOUT="" SERVICE="pub.flow:debugLog" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+</INVOKE>
+
+<EXIT FROM="$parent" SIGNAL="SUCCESS" FAILURE-MESSAGE="">
+  <COMMENT></COMMENT>
+</EXIT>
+</SEQUENCE>
+
+<SEQUENCE NAME="%Producto/PrecioProducto% == null || %Producto/PrecioProducto% == &#34;&#34;" TIMEOUT="" EXIT-ON="FAILURE">
+  <COMMENT>precio</COMMENT>
+
+  <!-- nodes -->
+
+<INVOKE TIMEOUT="" SERVICE="pub.flow:debugLog" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+</INVOKE>
+
+<EXIT FROM="$parent" SIGNAL="SUCCESS" FAILURE-MESSAGE="">
+  <COMMENT></COMMENT>
+</EXIT>
+</SEQUENCE>
+</BRANCH>
+</LOOP>
+
+<MAP TIMEOUT="" MODE="STANDALONE">
+  <COMMENT></COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">message</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">MensajeErrorDatos</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">message</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY FROM="/message;1;0" TO="/MensajeErrorDatos;1;0">
+</MAPCOPY>
+</MAP>
+</FLOW>

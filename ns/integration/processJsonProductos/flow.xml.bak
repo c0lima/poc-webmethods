@@ -565,6 +565,30 @@
 </MAPCOPY>
 </MAP>
 
+<INVOKE TIMEOUT="" SERVICE="integration:mensajeError" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+</MAP>
+</INVOKE>
+
+<SEQUENCE NAME="%MensajeErrorDatos% == null || %MensajeErrorDatos% == &#34;&#34;" TIMEOUT="" EXIT-ON="FAILURE">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<EXIT FROM="$parent" SIGNAL="SUCCESS" FAILURE-MESSAGE="">
+  <COMMENT></COMMENT>
+</EXIT>
+</SEQUENCE>
+
+<SEQUENCE TIMEOUT="" EXIT-ON="FAILURE">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
 <MAP TIMEOUT="" MODE="STANDALONE">
   <COMMENT>Cast to number BigDecimal</COMMENT>
   <MAPTARGET>
@@ -608,8 +632,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevoTotalVenta</value>
-        <value name="field_type">object</value>
+        <value name="field_name">messageID</value>
+        <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -619,9 +643,28 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">messageID</value>
+        <value name="field_name">NuevoTotalVenta</value>
+        <value name="field_type">object</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">MensajeErrorDatos</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
@@ -675,6 +718,25 @@
         <value name="field_name">messageID</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">MensajeErrorDatos</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
@@ -781,6 +843,17 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
+        <value name="field_name">messageID</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
         <value name="field_name">NuevoTotalVenta</value>
         <value name="field_type">object</value>
         <value name="field_dim">0</value>
@@ -800,12 +873,20 @@
         <value name="is_global">false</value>
       </record>
       <record javaclass="com.wm.util.Values">
-        <value name="node_type">unknown</value>
+        <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
         <value name="is_public">false</value>
-        <value name="field_name">messageID</value>
+        <value name="field_name">MensajeErrorDatos</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
@@ -856,8 +937,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevoTotalVenta</value>
-        <value name="field_type">object</value>
+        <value name="field_name">messageID</value>
+        <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -867,9 +948,28 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">messageID</value>
+        <value name="field_name">NuevoTotalVenta</value>
+        <value name="field_type">object</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">MensajeErrorDatos</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
@@ -928,6 +1028,261 @@
   <!-- nodes -->
 
 <MAPCOPY FROM="/num;3;0" TO="/NuevoIdSucursal;3;0">
+</MAPCOPY>
+</MAP>
+</MAPINVOKE>
+</MAP>
+
+<MAP TIMEOUT="" MODE="STANDALONE">
+  <COMMENT>Cast to number Interger idventa</COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">jsonString</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">docProducto</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">documents:TransaccionDatos_Productos</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">messageID</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">NuevoTotalVenta</value>
+        <value name="field_type">object</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">NuevoIdSucursal</value>
+        <value name="field_type">object</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">MensajeErrorDatos</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">NuevoIdVenta</value>
+        <value name="field_type">object</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">jsonString</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">docProducto</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">documents:TransaccionDatos_Productos</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">messageID</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">NuevoTotalVenta</value>
+        <value name="field_type">object</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">NuevoIdSucursal</value>
+        <value name="field_type">object</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">MensajeErrorDatos</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPINVOKE SERVICE="pub.math:toNumber" VALIDATE-IN="$none" VALIDATE-OUT="$none" INVOKE-ORDER="0">
+
+  <!-- nodes -->
+
+<MAP MODE="INVOKEINPUT">
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/convertAs;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">java.lang.Integer</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">field</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_name">convertAs</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+      <value>java.lang.Double</value>
+      <value>java.lang.Float</value>
+      <value>java.lang.Integer</value>
+      <value>java.lang.Long</value>
+      <value>java.math.BigDecimal</value>
+      <value>java.math.BigInteger</value>
+    </array>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPCOPY FROM="/docProducto;4;0;documents:TransaccionDatos_Productos/IdVenta;1;0" TO="/num;1;0">
+</MAPCOPY>
+</MAP>
+
+<MAP MODE="INVOKEOUTPUT">
+
+  <!-- nodes -->
+
+<MAPCOPY FROM="/num;3;0" TO="/NuevoIdVenta;3;0">
 </MAPCOPY>
 </MAP>
 </MAPINVOKE>
@@ -1088,6 +1443,17 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
+        <value name="field_name">messageID</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
         <value name="field_name">NuevoTotalVenta</value>
         <value name="field_type">object</value>
         <value name="field_dim">0</value>
@@ -1107,6 +1473,25 @@
         <value name="is_global">false</value>
       </record>
       <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">MensajeErrorDatos</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
@@ -1121,8 +1506,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">messageID</value>
-        <value name="field_type">string</value>
+        <value name="field_name">NuevoIdVenta</value>
+        <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -1231,6 +1616,17 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
+        <value name="field_name">messageID</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
         <value name="field_name">NuevoTotalVenta</value>
         <value name="field_type">object</value>
         <value name="field_dim">0</value>
@@ -1250,6 +1646,25 @@
         <value name="is_global">false</value>
       </record>
       <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">MensajeErrorDatos</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
@@ -1264,8 +1679,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">messageID</value>
-        <value name="field_type">string</value>
+        <value name="field_name">NuevoIdVenta</value>
+        <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -1317,6 +1732,17 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
+        <value name="field_name">messageID</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
         <value name="field_name">NuevoTotalVenta</value>
         <value name="field_type">object</value>
         <value name="field_dim">0</value>
@@ -1336,6 +1762,25 @@
         <value name="is_global">false</value>
       </record>
       <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">MensajeErrorDatos</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
@@ -1350,8 +1795,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">messageID</value>
-        <value name="field_type">string</value>
+        <value name="field_name">NuevoIdVenta</value>
+        <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -1475,8 +1920,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevoTotalVenta</value>
-        <value name="field_type">object</value>
+        <value name="field_name">messageID</value>
+        <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -1486,7 +1931,7 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevoIdSucursal</value>
+        <value name="field_name">NuevoTotalVenta</value>
         <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -1508,6 +1953,36 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
+        <value name="field_name">NuevoIdSucursal</value>
+        <value name="field_type">object</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">MensajeErrorDatos</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
         <value name="field_name">NuevaFecha</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
@@ -1519,8 +1994,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">messageID</value>
-        <value name="field_type">string</value>
+        <value name="field_name">NuevoIdVenta</value>
+        <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -1572,6 +2047,17 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
+        <value name="field_name">messageID</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
         <value name="field_name">NuevoTotalVenta</value>
         <value name="field_type">object</value>
         <value name="field_dim">0</value>
@@ -1591,6 +2077,25 @@
         <value name="is_global">false</value>
       </record>
       <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">MensajeErrorDatos</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
@@ -1605,8 +2110,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">messageID</value>
-        <value name="field_type">string</value>
+        <value name="field_name">NuevoIdVenta</value>
+        <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -1725,8 +2230,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevoTotalVenta</value>
-        <value name="field_type">object</value>
+        <value name="field_name">messageID</value>
+        <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -1736,7 +2241,7 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevoIdSucursal</value>
+        <value name="field_name">NuevoTotalVenta</value>
         <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -1758,8 +2263,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevaFecha</value>
-        <value name="field_type">string</value>
+        <value name="field_name">NuevoIdSucursal</value>
+        <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -1788,11 +2293,41 @@
         <value name="is_global">false</value>
       </record>
       <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">MensajeErrorDatos</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">messageID</value>
+        <value name="field_name">NuevaFecha</value>
         <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">NuevoIdVenta</value>
+        <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -1844,8 +2379,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevoTotalVenta</value>
-        <value name="field_type">object</value>
+        <value name="field_name">messageID</value>
+        <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -1855,7 +2390,7 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevoIdSucursal</value>
+        <value name="field_name">NuevoTotalVenta</value>
         <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -1877,6 +2412,36 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
+        <value name="field_name">NuevoIdSucursal</value>
+        <value name="field_type">object</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">MensajeErrorDatos</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
         <value name="field_name">NuevaFecha</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
@@ -1888,8 +2453,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">messageID</value>
-        <value name="field_type">string</value>
+        <value name="field_name">NuevoIdVenta</value>
+        <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -2081,6 +2646,18 @@
             <value name="node_type">unknown</value>
             <value name="node_subtype">unknown</value>
             <value name="is_public">false</value>
+            <value name="field_name">id_venta</value>
+            <value name="field_type">object</value>
+            <value name="field_dim">0</value>
+            <value name="wrapper_type">java.lang.Integer</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
             <value name="field_name">rut_cliente</value>
             <value name="field_type">string</value>
             <value name="field_dim">0</value>
@@ -2169,6 +2746,17 @@
             <value name="form_qualified">false</value>
             <value name="is_global">false</value>
           </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">nombre_sucursal</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+          </record>
         </array>
         <value name="modifiable">true</value>
       </record>
@@ -2230,8 +2818,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevoTotalVenta</value>
-        <value name="field_type">object</value>
+        <value name="field_name">messageID</value>
+        <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -2241,7 +2829,7 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevoIdSucursal</value>
+        <value name="field_name">NuevoTotalVenta</value>
         <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -2263,8 +2851,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevaFecha</value>
-        <value name="field_type">string</value>
+        <value name="field_name">NuevoIdSucursal</value>
+        <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -2293,11 +2881,41 @@
         <value name="is_global">false</value>
       </record>
       <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">MensajeErrorDatos</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">messageID</value>
+        <value name="field_name">NuevaFecha</value>
         <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">NuevoIdVenta</value>
+        <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -2358,6 +2976,9 @@
 </MAPCOPY>
 
 <MAPCOPY FROM="/NuevaFecha;1;0" TO="/db_adapterInput;2;0/fecha;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/docProducto;4;0;documents:TransaccionDatos_Productos/NombreSucursal;1;0" TO="/db_adapterInput;2;0/nombre_sucursal;1;0">
 </MAPCOPY>
 </MAP>
 
@@ -2439,8 +3060,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevoTotalVenta</value>
-        <value name="field_type">object</value>
+        <value name="field_name">messageID</value>
+        <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -2450,7 +3071,7 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevoIdSucursal</value>
+        <value name="field_name">NuevoTotalVenta</value>
         <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -2472,8 +3093,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevaFecha</value>
-        <value name="field_type">string</value>
+        <value name="field_name">NuevoIdSucursal</value>
+        <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -2502,11 +3123,41 @@
         <value name="is_global">false</value>
       </record>
       <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">MensajeErrorDatos</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">messageID</value>
+        <value name="field_name">NuevaFecha</value>
         <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">NuevoIdVenta</value>
+        <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -2586,8 +3237,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevoTotalVenta</value>
-        <value name="field_type">object</value>
+        <value name="field_name">messageID</value>
+        <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -2597,7 +3248,7 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevoIdSucursal</value>
+        <value name="field_name">NuevoTotalVenta</value>
         <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -2619,8 +3270,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevaFecha</value>
-        <value name="field_type">string</value>
+        <value name="field_name">NuevoIdSucursal</value>
+        <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -2649,11 +3300,41 @@
         <value name="is_global">false</value>
       </record>
       <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">MensajeErrorDatos</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">messageID</value>
+        <value name="field_name">NuevaFecha</value>
         <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">NuevoIdVenta</value>
+        <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -3057,8 +3738,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevoTotalVenta</value>
-        <value name="field_type">object</value>
+        <value name="field_name">messageID</value>
+        <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -3068,7 +3749,7 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevoIdSucursal</value>
+        <value name="field_name">NuevoTotalVenta</value>
         <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -3090,8 +3771,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevaFecha</value>
-        <value name="field_type">string</value>
+        <value name="field_name">NuevoIdSucursal</value>
+        <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -3120,11 +3801,41 @@
         <value name="is_global">false</value>
       </record>
       <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">MensajeErrorDatos</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">messageID</value>
+        <value name="field_name">NuevaFecha</value>
         <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">NuevoIdVenta</value>
+        <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -3396,8 +4107,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevoTotalVenta</value>
-        <value name="field_type">object</value>
+        <value name="field_name">messageID</value>
+        <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -3407,7 +4118,7 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevoIdSucursal</value>
+        <value name="field_name">NuevoTotalVenta</value>
         <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -3429,8 +4140,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevaFecha</value>
-        <value name="field_type">string</value>
+        <value name="field_name">NuevoIdSucursal</value>
+        <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -3459,11 +4170,41 @@
         <value name="is_global">false</value>
       </record>
       <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">MensajeErrorDatos</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">messageID</value>
+        <value name="field_name">NuevaFecha</value>
         <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">NuevoIdVenta</value>
+        <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -3531,6 +4272,7 @@
 </INVOKE>
 </RETRY>
 </LOOP>
+</SEQUENCE>
 </SEQUENCE>
 
 <SEQUENCE TIMEOUT="" EXIT-ON="FAILURE">
@@ -3689,8 +4431,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevoTotalVenta</value>
-        <value name="field_type">object</value>
+        <value name="field_name">messageID</value>
+        <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -3700,7 +4442,7 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevoIdSucursal</value>
+        <value name="field_name">NuevoTotalVenta</value>
         <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -3722,8 +4464,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevaFecha</value>
-        <value name="field_type">string</value>
+        <value name="field_name">NuevoIdSucursal</value>
+        <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -3752,11 +4494,41 @@
         <value name="is_global">false</value>
       </record>
       <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">MensajeErrorDatos</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">messageID</value>
+        <value name="field_name">NuevaFecha</value>
         <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">NuevoIdVenta</value>
+        <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -3884,8 +4656,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevoTotalVenta</value>
-        <value name="field_type">object</value>
+        <value name="field_name">messageID</value>
+        <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -3895,7 +4667,7 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevoIdSucursal</value>
+        <value name="field_name">NuevoTotalVenta</value>
         <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -3917,8 +4689,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevaFecha</value>
-        <value name="field_type">string</value>
+        <value name="field_name">NuevoIdSucursal</value>
+        <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -3947,10 +4719,51 @@
         <value name="is_global">false</value>
       </record>
       <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">MensajeErrorDatos</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">messageID</value>
+        <value name="field_name">NuevaFecha</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">NuevoIdVenta</value>
+        <value name="field_type">object</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">MensajeError</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -3983,17 +4796,6 @@
         <value name="is_global">false</value>
         <value name="modifiable">true</value>
         <value name="rec_ref">pub.event:exceptionInfo</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
-        <value name="node_type">unknown</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
-        <value name="field_name">MensajeError</value>
-        <value name="field_type">string</value>
-        <value name="field_dim">0</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
       </record>
     </array>
     <value name="modifiable">true</value>
@@ -4035,6 +4837,127 @@
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
         <array name="rec_fields" type="record" depth="1">
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">record</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">body</value>
+            <value name="field_type">record</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+            <array name="rec_fields" type="record" depth="1">
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="node_subtype">unknown</value>
+                <value name="is_public">false</value>
+                <value name="field_name">string</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="nillable">true</value>
+                <value name="form_qualified">false</value>
+                <value name="is_global">false</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="node_subtype">unknown</value>
+                <value name="node_comment"></value>
+                <record name="node_hints" javaclass="com.wm.util.Values">
+                  <value name="field_largerEditor">false</value>
+                  <value name="field_password">false</value>
+                </record>
+                <value name="is_public">false</value>
+                <value name="field_name">bytes</value>
+                <value name="field_type">object</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">true</value>
+                <value name="wrapper_type">byte []</value>
+                <value name="nillable">true</value>
+                <value name="form_qualified">false</value>
+                <value name="is_global">false</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="node_subtype">unknown</value>
+                <value name="is_public">false</value>
+                <value name="field_name">object</value>
+                <value name="field_type">object</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">true</value>
+                <value name="nillable">true</value>
+                <value name="form_qualified">false</value>
+                <value name="is_global">false</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">record</value>
+                <value name="node_subtype">unknown</value>
+                <value name="is_public">false</value>
+                <value name="field_name">data</value>
+                <value name="field_type">record</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">true</value>
+                <value name="nillable">true</value>
+                <value name="form_qualified">false</value>
+                <value name="is_global">false</value>
+                <array name="rec_fields" type="record" depth="1">
+                </array>
+                <value name="modifiable">true</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="node_subtype">unknown</value>
+                <value name="is_public">false</value>
+                <value name="field_name">message</value>
+                <value name="field_type">object</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">true</value>
+                <value name="nillable">true</value>
+                <value name="form_qualified">false</value>
+                <value name="is_global">false</value>
+              </record>
+            </array>
+            <value name="modifiable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">record</value>
+            <value name="node_subtype">unknown</value>
+            <value name="node_comment"></value>
+            <record name="node_hints" javaclass="com.wm.util.Values">
+              <value name="field_largerEditor">false</value>
+              <value name="field_password">false</value>
+            </record>
+            <value name="is_public">false</value>
+            <value name="field_name">header</value>
+            <value name="field_type">record</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+            <array name="rec_fields" type="record" depth="1">
+            </array>
+            <value name="modifiable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">record</value>
+            <value name="node_subtype">unknown</value>
+            <value name="node_comment"></value>
+            <record name="node_hints" javaclass="com.wm.util.Values">
+              <value name="field_largerEditor">false</value>
+              <value name="field_password">false</value>
+            </record>
+            <value name="is_public">false</value>
+            <value name="field_name">properties</value>
+            <value name="field_type">record</value>
+            <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+            <array name="rec_fields" type="record" depth="1">
+            </array>
+            <value name="modifiable">true</value>
+          </record>
         </array>
         <value name="modifiable">true</value>
       </record>
@@ -4080,8 +5003,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevoTotalVenta</value>
-        <value name="field_type">object</value>
+        <value name="field_name">messageID</value>
+        <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -4091,7 +5014,7 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevoIdSucursal</value>
+        <value name="field_name">NuevoTotalVenta</value>
         <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -4113,8 +5036,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevaFecha</value>
-        <value name="field_type">string</value>
+        <value name="field_name">NuevoIdSucursal</value>
+        <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -4143,11 +5066,41 @@
         <value name="is_global">false</value>
       </record>
       <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">MensajeErrorDatos</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">messageID</value>
+        <value name="field_name">NuevaFecha</value>
         <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">NuevoIdVenta</value>
+        <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -4196,13 +5149,13 @@
 
   <!-- nodes -->
 
-<MAPCOPY FROM="/jsonString;1;0" TO="/inString2;1;0">
+<MAPCOPY FROM="/lastError;4;0;pub.event:exceptionInfo/error;1;0" TO="/inString2;1;0">
 </MAPCOPY>
 
-<MAPCOPY FROM="/lastError;4;0;pub.event:exceptionInfo/localizedError;1;0" TO="/inString1;1;0">
+<MAPCOPY FROM="/JMSMessage;2;0/body;2;0/string;1;0" TO="/inString1;1;0">
 </MAPCOPY>
 
-<MAPCOPY FROM="/lastError;4;0;pub.event:exceptionInfo/errorDump;1;0" TO="/inString3;1;0">
+<MAPCOPY FROM="/MensajeErrorDatos;1;0" TO="/inString3;1;0">
 </MAPCOPY>
 </MAP>
 
@@ -4366,8 +5319,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevoTotalVenta</value>
-        <value name="field_type">object</value>
+        <value name="field_name">messageID</value>
+        <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -4377,7 +5330,7 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevoIdSucursal</value>
+        <value name="field_name">NuevoTotalVenta</value>
         <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -4399,8 +5352,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevaFecha</value>
-        <value name="field_type">string</value>
+        <value name="field_name">NuevoIdSucursal</value>
+        <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -4429,10 +5382,51 @@
         <value name="is_global">false</value>
       </record>
       <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">MensajeErrorDatos</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">messageID</value>
+        <value name="field_name">NuevaFecha</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">NuevoIdVenta</value>
+        <value name="field_type">object</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">MensajeError</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -4465,17 +5459,6 @@
         <value name="is_global">false</value>
         <value name="modifiable">true</value>
         <value name="rec_ref">pub.event:exceptionInfo</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
-        <value name="node_type">unknown</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
-        <value name="field_name">MensajeError</value>
-        <value name="field_type">string</value>
-        <value name="field_dim">0</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
       </record>
     </array>
     <value name="modifiable">true</value>
@@ -4816,8 +5799,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevoTotalVenta</value>
-        <value name="field_type">object</value>
+        <value name="field_name">messageID</value>
+        <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -4827,7 +5810,7 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevoIdSucursal</value>
+        <value name="field_name">NuevoTotalVenta</value>
         <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -4849,8 +5832,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevaFecha</value>
-        <value name="field_type">string</value>
+        <value name="field_name">NuevoIdSucursal</value>
+        <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -4879,10 +5862,51 @@
         <value name="is_global">false</value>
       </record>
       <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">MensajeErrorDatos</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">messageID</value>
+        <value name="field_name">NuevaFecha</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">NuevoIdVenta</value>
+        <value name="field_type">object</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">MensajeError</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -4915,17 +5939,6 @@
         <value name="is_global">false</value>
         <value name="modifiable">true</value>
         <value name="rec_ref">pub.event:exceptionInfo</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
-        <value name="node_type">unknown</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
-        <value name="field_name">MensajeError</value>
-        <value name="field_type">string</value>
-        <value name="field_dim">0</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
       </record>
     </array>
     <value name="modifiable">true</value>
@@ -5130,8 +6143,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevoTotalVenta</value>
-        <value name="field_type">object</value>
+        <value name="field_name">messageID</value>
+        <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -5141,7 +6154,7 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevoIdSucursal</value>
+        <value name="field_name">NuevoTotalVenta</value>
         <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -5163,8 +6176,8 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">NuevaFecha</value>
-        <value name="field_type">string</value>
+        <value name="field_name">NuevoIdSucursal</value>
+        <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
@@ -5193,10 +6206,51 @@
         <value name="is_global">false</value>
       </record>
       <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">MensajeErrorDatos</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">messageID</value>
+        <value name="field_name">NuevaFecha</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">NuevoIdVenta</value>
+        <value name="field_type">object</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">MensajeError</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -5229,17 +6283,6 @@
         <value name="is_global">false</value>
         <value name="modifiable">true</value>
         <value name="rec_ref">pub.event:exceptionInfo</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
-        <value name="node_type">unknown</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
-        <value name="field_name">MensajeError</value>
-        <value name="field_type">string</value>
-        <value name="field_dim">0</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
       </record>
     </array>
     <value name="modifiable">true</value>
