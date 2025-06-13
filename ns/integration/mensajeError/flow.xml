@@ -778,7 +778,7 @@
 
   <!-- nodes -->
 
-<SEQUENCE NAME=" %Producto/IdProducto% == null || %Producto/IdProducto% == &#34;&#34;" TIMEOUT="" EXIT-ON="FAILURE">
+<SEQUENCE NAME=" %docProducto/Producto/IdProducto% == null || %docProducto/Producto/IdProducto% == &#34;&#34;" TIMEOUT="" EXIT-ON="FAILURE">
   <COMMENT>id_producto</COMMENT>
 
   <!-- nodes -->
@@ -902,7 +902,7 @@
 </EXIT>
 </SEQUENCE>
 
-<SEQUENCE NAME="%Producto/NombreProducto% == null || %Producto/NombreProducto% == &#34;&#34;" TIMEOUT="" EXIT-ON="FAILURE">
+<SEQUENCE NAME="%docProducto/Producto/NombreProducto% == null || %docProducto/Producto/NombreProducto% == &#34;&#34;" TIMEOUT="" EXIT-ON="FAILURE">
   <COMMENT>Nombre_producto</COMMENT>
 
   <!-- nodes -->
@@ -1026,7 +1026,7 @@
 </EXIT>
 </SEQUENCE>
 
-<SEQUENCE NAME="%Producto/Cantidad% == null || %Producto/Cantidad% == &#34;&#34;" TIMEOUT="" EXIT-ON="FAILURE">
+<SEQUENCE NAME="%docProducto/Producto/Cantidad% == null || %docProducto/Producto/Cantidad% == &#34;&#34;" TIMEOUT="" EXIT-ON="FAILURE">
   <COMMENT>cantidad</COMMENT>
 
   <!-- nodes -->
@@ -1150,7 +1150,7 @@
 </EXIT>
 </SEQUENCE>
 
-<SEQUENCE NAME="%Producto/PrecioProducto% == null || %Producto/PrecioProducto% == &#34;&#34;" TIMEOUT="" EXIT-ON="FAILURE">
+<SEQUENCE NAME="%docProducto/Producto/PrecioProducto% == null || %docProducto/Producto/PrecioProducto% == &#34;&#34;" TIMEOUT="" EXIT-ON="FAILURE">
   <COMMENT>precio</COMMENT>
 
   <!-- nodes -->
