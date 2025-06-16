@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <record name="listeners" javaclass="com.wm.util.Values">
+    <record name="WebSocketListener@8082" javaclass="com.wm.util.Values">
+      <number name="port" type="Integer">8082</number>
+      <value name="protocol">WebSocket</value>
+      <value name="pkg">Socius_wMiPaaSDemosProject</value>
+      <value name="enabled">true</value>
+      <value name="key">WebSocketListener@8082</value>
+      <value name="uniqueID">6b1b1c918e554f018ab4f8343623c1b5</value>
+      <value name="portAlias">listen-for-messages</value>
+      <value name="portDescription">Integration Server WebSocket port: 8082</value>
+      <value name="listenerType">WebSocket</value>
+      <value name="factoryKey">webMethods/WebSocket</value>
+      <value name="configURL">/WmRoot/configWebSocket.dsp</value>
+      <value name="provider">webMethods</value>
+      <value name="maxQueue">6000</value>
+      <value name="minThread">10</value>
+      <value name="maxThread">200</value>
+      <value name="threadPriority">5</value>
+      <value name="idleTimeout">300000</value>
+      <value name="clientAuth">basic</value>
+    </record>
+  </record>
+  <record name="access" javaclass="com.wm.util.Values">
+    <record name="WebSocketListener@8082" javaclass="com.wm.util.Values">
+      <null name="home"/>
+      <value name="default">include</value>
+      <record name="nodes" javaclass="com.wm.util.StringSet">
+        <list name="elements">
+        </list>
+      </record>
+      <value name="key">WebSocketListener@8082</value>
+    </record>
+  </record>
+</Values>
